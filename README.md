@@ -23,11 +23,14 @@ The raw data was fairly large and messy and needed preping before proper anslysi
 **Challenges**
 
 - Data dispersed across tables (joins needed)
-- Review Scores had nulls/missing data
+- Review scores had nulls/missing data
 - Inconsistent keys
 - Columns had wrong datatype
 - Original schema lacked detail
 - Similar sounding columns (required description reading)
 - Lacked key features needed to perform analysis
-- Long time to import data into MySQL 
+- Long time to import data into MySQL
+
+## Data Cleaning/Feature Engineering
+After downloading the dataset, I used MySQL to first create the database, then create the tables. An issue arose when trying to import the data into MySQL using the Data Import Wizard feature it was extreamly slow since the dataset was fairly large. In order to solve this problem, I imported the raw CSV data into MySQL using LOAD DATA INFILE which resulted in a faster loading time.
   
