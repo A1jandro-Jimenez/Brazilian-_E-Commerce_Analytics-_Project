@@ -32,5 +32,9 @@ The raw data was fairly large and messy and needed preping before proper anslysi
 - Long time to import data into MySQL
 
 ## Data Cleaning/Feature Engineering
-After downloading the dataset, I used MySQL to first create the database, then create the tables. An issue arose when trying to import the data into MySQL using the Data Import Wizard feature it was extreamly slow since the dataset was fairly large. In order to solve this problem, I imported the raw CSV data into MySQL using LOAD DATA INFILE which resulted in a faster loading time. The full SQL script for this proccess can be found in the 
+### SQL for Data Structure Cleaning
+After downloading the dataset, I used MySQL to first create the database, then create the tables. An issue arose when trying to import the data into MySQL using the Data Import Wizard feature it was extreamly slow since the dataset was fairly large. In order to solve this problem, I imported the raw CSV data into MySQL using LOAD DATA INFILE which resulted in a faster loading time. The full SQL script for this proccess can be found here: [Creating Database](Creating_Olist_Database.sql). 
+
+Once the tables were imported with the necessary data, I took some time to explore each table and read the description of column to get a more profound understanding of what each table, column, and row truely meant. As mentioned the original schema lacked detailed so it was at this time when I created the er diagram showen the previous section in order to find the relationships between each table. The new diagram allowed me to created the primary and foreign keys much easier as it made it evident where the connections were. The Olist dataset contained many orders so performing certain queires could take some time. The best way to speed up run time was to make indexes for the joins. Adding indexes on join keys and frequently filtered columns helped improve query performance before exporting data to other places. Instead of scaning everything when performing a join, it will reference only the already esablish join with the given name making for a much faster run time. The script
+
   
