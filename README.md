@@ -49,3 +49,12 @@ A quick recap of each view:
 - delivery_metrics - Found days it took to deliver for each order. Found days order was late by. 
 - order_analysis - Main view where data from other views was joined into. Established the feature of is_late to orders where delivered date was more than estimated delivery date. Used for data exploration and testing in python. 
   
+### Python for Null Removal and Feature Engineering
+Before exploring the data, I checked for nulls in Python using isnull function. Afterwards, the rows that had any nulls were removed completely using the dropna function. The dataset was large enough that removing a couple hundred rows still left us with a total of around 95,000 orders to use in our analysis. A few key features were missing in the order analysis view that we added using Python.
+
+Added features:
+
+- total order value - combined both price and frieght cost. 
+- days_late - To see how many days late a "late order'' was late. 
+- delivery_group - Grouped each order by amount of days it took to deliver order
+
