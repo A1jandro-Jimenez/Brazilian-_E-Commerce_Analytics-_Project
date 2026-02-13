@@ -39,4 +39,13 @@ Once the tables were imported with the necessary data, I took some time to explo
 
 The Olist dataset contained many orders so performing certain queires could take some time. The best way to speed up run time was to make indexes for the joins. Adding indexes on join keys and frequently filtered columns helped improve query performance before exporting data to other places. Instead of scaning everything when performing a join, it will reference only the already esablish join with the given name making for a much faster run time. The script can be foud here: [Keys & Indexes](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Adding_primary_keys_and_indexes.sql). 
 
-The most important rule to follow when work with data is **you never want to destroy or overwrite raw data**. I used SQL views to create clean, reusable analytical datasets while preserving raw data integrity: 
+The most important rule to follow when work with data is **you never want to destroy or overwrite raw data**. I used SQL views to create clean, reusable analytical datasets while preserving raw data integrity: [Creating Views](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Creating_Olist_Views.sql). 
+
+A quick recap of each view:
+
+- delivered_orders - Retrieved orders that were delivered and dates were not null
+- order_items_agg - Used to find total order vaule and total freight cost for each order
+- order_reviews_agg - Got review scores for each order and the last date a review was given
+- delivery_metrics - Found days it took to deliver for each order. Found days order was late by. 
+- order_analysis - Main view where data from other views was joined into. Established the feature of is_late to orders where delivered date was more than estimated delivery date. Used for data exploration and testing in python. 
+  
