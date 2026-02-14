@@ -58,3 +58,10 @@ Added features:
 - days_late - To see how many days late a "late order'' was late. 
 - delivery_group - Grouped each order by amount of days it took to deliver order
 
+The file [Python Cleaning and Analysis](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Olist_Analysis.html) demonstrates the creation of these features. 
+
+A hybrid of SQL and Python was used to clean and prepare data for analysis. I was able to keep the raw data, join tables together, remove nulls and dulpicates, create features among other things, in order to be able to explore the data easily and as accuarte as possible. 
+
+## Exploratory Data Analysis
+All of the data exploring was done in Python and can be found in the file [Python Cleaning and Analysis](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Olist_Analysis.html). Copy the file url into this website [Html Rendering Website](https://html-preview.github.io/) to preview the file in its intended form. 
+| | Description |
