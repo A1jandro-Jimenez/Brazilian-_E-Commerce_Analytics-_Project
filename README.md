@@ -64,4 +64,6 @@ A hybrid of SQL and Python was used to clean and prepare data for analysis. I wa
 
 ## Exploratory Data Analysis
 All of the data exploring was done in Python and can be found in the file [Python Cleaning and Analysis](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Olist_Analysis.html). Copy the file url into this website [Html Rendering Website](https://html-preview.github.io/) to preview the file in its intended form. 
-| | Description |
+olarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/my_plot.svg)  |  ![](https://...Ocean.png)
