@@ -88,7 +88,7 @@ All of the data exploring was done in Python and can be found in the file [Pytho
 
 | Figure 1| Figure 2|
 |--------|------- |
-|![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Score%20by%20Delivery%20Days%20Plt.svg)|![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Percent%20of%20Review%20Score.svg)|
+|![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Score%20by%20Delivery%20Days%20Plt.svg)|![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Percent%20of%20Review%20Score.svg)|
 | <div align="center">
 
 
@@ -96,9 +96,9 @@ All of the data exploring was done in Python and can be found in the file [Pytho
 
 
 
-1            |  2
+Figure 3            |  Figure 4
 :-------------------------:|:-------------------------:
-|  ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Review%20Score%20by%20Delivery%20Time.svg) | ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/my_plot.svg) |
+|  ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Review%20Score%20by%20Delivery%20Time.svg) | ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/my_plot.svg) |
 
 
 
