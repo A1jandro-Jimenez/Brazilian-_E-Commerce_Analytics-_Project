@@ -64,6 +64,108 @@ A hybrid of SQL and Python was used to clean and prepare data for analysis. I wa
 
 ## Exploratory Data Analysis
 All of the data exploring was done in Python and can be found in the file [Python Cleaning and Analysis](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Olist_Analysis.html). Copy the file url into this website [Html Rendering Website](https://html-preview.github.io/) to preview the file in its intended form. 
-olarized dark             |  Solarized Ocean
+
+<div align="center">
+
+### 📊 Key Metrics
+
+| Metric | Value |
+|--------|--------|
+| Total Orders | 95,822 |
+|  Unique Customers| 92,745|
+| Total Revenue | $13,108,331.69 |
+|Avg Order Value  | $136.8 |
+|Avg Items per Order|1.14|
+| Avg Delivery Days | 12.45 |
+| Late Delivery Rate | 6.66% |
+|Avg Review Score  | 4.16 |
+| Median Delivery Day | 10.0 |
+| Median Order Value |$ 86.125 |
+</div>
+
+
+<div align="center">
+
+| Figure 1| Figure 2|
+|--------|------- |
+|![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Score%20by%20Delivery%20Days%20Plt.svg)|![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Percent%20of%20Review%20Score.svg)|
+| <div align="center">
+
+
+
+
+
+
+1            |  2
 :-------------------------:|:-------------------------:
-![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/my_plot.svg)  |  ![](https://...Ocean.png)
+|  ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Review%20Score%20by%20Delivery%20Time.svg) | ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/my_plot.svg) |
+
+
+
+<div align="center">
+
+### Product Analysis for 30-60 Days Group
+
+|Product Category|Delayed Orders|	Avg Delivery Days|Avg Review Score|	Potential Revenue Lost|		
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+|bed_bath_table|419|38.603306|2.094008|$61,101.81|
+health_beauty|398|38.828235|2.244706|$71,019.17|
+sports_leisure|321|37.888563|2.255132|$56,521.85|
+computers_accessories|302|38.062323|2.271955|$64,268.77|
+watches_gifts|287|37.860068|2.334471|$72,374.81|
+</div>
+
+
+<div align="center">
+
+### Product Analysis for 60+ Days Group
+
+|Product Category|Delayed Orders|	Avg Delivery Days|Avg Review Score|	Potential Revenue Lost|		
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+bed_bath_table|29|78.633333|2.416667|	$3,521.63|
+furniture_decor|28|88.242424|2.212121|$5,997.27|
+auto|22|85.363636|2.409091|$6,302.47|
+health_beauty	|22|79.409091|2.363636|$4,595.45|
+sports_leisure|18|88.100000|2.000000|$3,158.41|
+</div>
+
+
+
+
+<div align="center">
+  
+### Top 5 Sellers with the most delayed orders (30-60 Days)
+|Index|Seller_Id|Product Category|Seller City|Order Value|Delivery Days|Review Score|
+| ----------- | ----------- | ----------- | ----------- | ----------- |----------- | -----------|
+|1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|	itaquaquecetuba|	$3,748.50	|43|1|
+1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|itaquaquecetuba|$1,529.10	|39|1|
+2|	4869f7a5dfa277a7dca6462dcf3b52b2| watches_gifts| guariba| $689.00|30| 1|
+2|	4869f7a5dfa277a7dca6462dcf3b52b2| watches_gifts| guariba|$688.00|32	|1|
+3| 4a3ca9315b744ce9f8e9374361493884| bed_bath_table| ibitinga| $2,768.00|34|1|
+3| 4a3ca9315b744ce9f8e9374361493884| bed_bath_table| ibitinga|$1,493.10|37|	1|
+4| 1f50f920176fa81dab994f9023523100| garden_tools| sao jose do rio preto|	$539.10|	32|	2|
+4| 1f50f920176fa81dab994f9023523100| garden_tools| sao jose do rio preto|	$485.10	|51|	1|
+5| cc419e0650a3c5ba77189a1882b7556a| health_beauty| santo andre	|$89.99	|32	|2|
+5| cc419e0650a3c5ba77189a1882b7556a| health_beauty| santo andre	|$89.99|	48|	1|
+</div>
+
+
+
+<div align="center">
+  
+### Top 5 Sellers with the most delayed orders (60+ Days)
+|Index|Seller_Id|Product Category|Seller City|Order Value|Delivery Days|Review Score|
+| ----------- | ----------- | ----------- | ----------- | ----------- |----------- | -----------|
+|1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|itaquaquecetuba|$719.91|85|1|
+|1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|itaquaquecetuba|$229.99|72|1|
+|2|da8622b14eb17ae2831f4ac5b9dab84a|bed_bath_table|piracicaba|	$169.90|62|1|
+|2|da8622b14eb17ae2831f4ac5b9dab84a|bed_bath_table|piracicaba|	$109.90|63|1|
+|3|	4a3ca9315b744ce9f8e9374361493884|bed_bath_table|ibitinga|$279.90|64|1|
+|4|	712e6ed8aa4aa1fa65dab41fed5737e4|	auto|	videira	|$559.00|133|2|
+|4|	712e6ed8aa4aa1fa65dab41fed5737e4|	auto|videira|$559.00|61|1|
+|5|	e9779976487b77c6d4ac45f75ec7afe9|	food|praia grande	|$177.00|68|1|
+|5|	e9779976487b77c6d4ac45f75ec7afe10|drinks|praia grande|$130.00|	68	|1|
+
+
+
+
