@@ -71,28 +71,43 @@ All of the data exploring was done in Python and can be found in the file [Pytho
 
 | Metric | Value |
 |--------|--------|
-| Total Orders | 95,822 |
-|  Unique Customers| 92,745|
-| Total Revenue | $13,108,331.69 |
-|Avg Order Value  | $136.8 |
-|Avg Items per Order|1.14|
-| Avg Delivery Days | 12.45 |
-| Late Delivery Rate | 6.66% |
-|Avg Review Score  | 4.16 |
+| Total Orders | 107,812 |                                                
+|  Unique Customers| 91,471|
+| Total Revenue | $16,377,577.45|
+|Avg Order Value  |$151.91 |
+|Avg Items per Order|1.39|
+| Avg Delivery Days | 12.36|
+| Late Delivery Rate | 6.46% |
+|Avg Review Score  | 4.08 |
 | Median Delivery Day | 10.0 |
-| Median Order Value |$ 86.125 |
+| Median Order Value |$ 90.44 |
+|Repeat Rate|2.95%|
 </div>
 
+The Key Metrics table highlights quick and useful measurments that executives could use to set goals for the year. 
+The total revenue generated within the given time period was around 16 million dollars with a repeat rate of 2.95%. The repeat rate is the percentage of customers who placed more than one order. Stakeholders and other executives can set goals for example raise the repeat rate to 4%, get the numbe of orders to 150,000, and set a goal to get 4,000 new customers or around 95,000 unique customers. They can then look at the new total revenue and see if setting these goals helped earned more. If the same metrics are calcualted over time, patterns can emerge that can lead to higher earnings. 
+
+Simlalry we can look at average delivery days and late delivery rate to see if changes in those effects the average review score. 
+Being able to find patters over time using these metrics is what makes them so useful and why it is important to keep track of them. 
 
 <div align="center">
 
 | Figure 1| Figure 2|
 |--------|------- |
 |![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Score%20by%20Delivery%20Days%20Plt.svg)|![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Percent%20of%20Review%20Score.svg)|
-| <div align="center">
+</div>
+
+Referring back to our main question do delivery delays lead to lower customer review scores?, a simple and effective way to find an answer is to plot the average review score of all the orders that took the same amount of days to deliver and plot them. For example get all the orders that took zero days to deliver and find the average review score, get all orders that took 1 day to deliver and find the average review score, and so on and so on. The result is **Figure 1**. 
+
+Key findings: 
+1. Orders that took zero days to deliver on average have 5 stars
+2. A slight decline in average review score from 5 to around 4 occurs between in the first 20 day time period as expected.
+3. **A shap decline in average review score from 4 to around 2 occurs between 20 to 40 days to deilver suggesting that 20 days is the threshold where customers are willing to wait until leaving a negative review**
+4. The average review score fluctuates between 2 and 1.5 in the time frame of 40 to 60 days indecating a mild effect on review score(customers were already tired of waiting so they were giving a bad socre anyway). 
+5. The data becomes noisy after 60 plus days perhaps due to the few number of orders that took that many days to deliver.
 
 
-
+**Figure 2** shows the distribution of review scores across all orders. As mentioned earlier 
 
 
 
