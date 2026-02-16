@@ -107,7 +107,11 @@ Key findings:
 5. The data becomes noisy after 60 plus days perhaps due to the few number of orders that took that many days to deliver.
 
 
-**Figure 2** shows the distribution of review scores across all orders. As mentioned earlier 
+**Figure 2** shows the distribution of review scores across all orders. As mentioned earlier we want to see how diffrent factors affect review score, so it is important to obtain the distribution of review scores and compare it to others in the future. 
+Key findings: 
+1. About 80% of review scores are "positive" meaning a score of 4 or more. This can help buld trust for sellers and buyers to use our site more as most of the time people buy on good reviews.
+2. The third largest review score was 1 making up 10% of a review scores. It would be better to have the distiribution be in descending order with a score of 5 being in the most and 1 being the least. However that is not the case in our data.
+3. Scores 3 and 2 make up less than 10% and less than 5% respectively. We could try to set goals in order to lower "bad review scores" (2s and 1s) but more on that later. 
 
 
 
@@ -115,6 +119,14 @@ Figure 3            |  Figure 4
 :-------------------------:|:-------------------------:
 |  ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Review%20Score%20by%20Delivery%20Time.svg) | ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/my_plot.svg) |
 
+Similar to figure 1, **Figure 3** demonstrates the review score by deliver days, however the days are grouped into four different time periods and the boxplot shows distribution and variability within each group rather than just averages. 
+
+Key findings: 
+1. **Median review scores decline as delivery duration increases, indicating deteriorating customer satisfaction with slower fulfillment**. Once again we have strong evidence to support that claim that longer deliver days lead to lower customer satisfaction. 
+2. Both groups (0-15, and 16-30 days) have a left-skewed distribution meaning the concentration of data points is more towards the higher values (3, 4 and 5) than lower values (1 and 2). As seen before orders who took less than 30 days to deliver seem to get higher scores.
+3. The other two groups (31-60, and 60+) have a right-skewed distribution which states that the concentration is more towards the lower values and than high values. Lower score ratings are given more often for these group compared to higer scores.
+4. The spread a.k.a the box seems to get taller for longer deliver times suggesting inconsistent customer reactions to delays.
+5. Groups (31-60, and 60+) have the bottom of the the box below a score of 3 which means that at least 25% or more of the customers are unsatisfy. A big red flag.
 
 
 <div align="center">
