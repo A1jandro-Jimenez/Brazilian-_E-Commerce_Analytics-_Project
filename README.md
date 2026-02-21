@@ -129,15 +129,19 @@ Key findings:
 5. Groups (31-60, and 60+) have the bottom of the the box below a score of 3 which means that at least 25% or more of the customers are unsatisfy. A big red flag.
 
 
-<div align="center">
 
+
+The final figure, **Figure 4**, displays another boxplot this time of the distribution of order values. With this figure it is clear what classifies as a high value order and what falls under a normal or standard amount. A large majority of our orders range from around $10 to $500 dollars. The boxplot displays a lot of orders outside the $500 mark indecating that we do have some orders that we can consider high value. the wiskers also tell us that a lot more orders are of over $100 as the tail is shorter on top than on the bottom so data is skewed towards the higher values. Looking at order values along with review scores can help us answer whether or not high value orders receive better scores. It is important to establish a baseline first before performing further analysis. 
+
+<div align="center">
+  
 ### Product Analysis for 30-60 Days Group
 
 |Product Category|Delayed Orders|	Avg Delivery Days|Avg Review Score|	Potential Revenue Lost|		
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-|bed_bath_table|419|38.603306|2.094008|$61,101.81|
-health_beauty|398|38.828235|2.244706|$71,019.17|
-sports_leisure|321|37.888563|2.255132|$56,521.85|
+|<mark>bed_bath_table<mark>|419|38.603306|2.094008|$61,101.81|
+<mark>health_beauty<mark>|398|38.828235|2.244706|$71,019.17|
+<mark>sports_leisure<mark>|321|37.888563|2.255132|$56,521.85|
 computers_accessories|302|38.062323|2.271955|$64,268.77|
 watches_gifts|287|37.860068|2.334471|$72,374.81|
 </div>
@@ -149,14 +153,19 @@ watches_gifts|287|37.860068|2.334471|$72,374.81|
 
 |Product Category|Delayed Orders|	Avg Delivery Days|Avg Review Score|	Potential Revenue Lost|		
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-bed_bath_table|29|78.633333|2.416667|	$3,521.63|
+<mark>bed_bath_table<mark>|29|78.633333|2.416667|	$3,521.63|
 furniture_decor|28|88.242424|2.212121|$5,997.27|
 auto|22|85.363636|2.409091|$6,302.47|
-health_beauty	|22|79.409091|2.363636|$4,595.45|
-sports_leisure|18|88.100000|2.000000|$3,158.41|
+<mark>health_beauty<mark>	|22|79.409091|2.363636|$4,595.45|
+<mark>sports_leisure<mark>|18|88.100000|2.000000|$3,158.41|
 </div>
 
+There are many factors that can also impact review score, however I decided to focus on two easy but impactful ones which are product type and seller. Earlier in the analysis it was found that after 20 days the average review score declines steeply from 4 to 2 in a twenty day period. Orders that took 30 days to deliver had an average score of 3 which is an acceptable score so it would be ideal to observe the orders with scores lower than 3 which were orders that took more than 30 days. Two groups were created, orders that took 30-60 days and order that took 60 days or more. For each group I looked at the top 5 product categories with the most orders in that group. The results are shown in the tables above. 
 
+Findings: 
+- The category that had the most orders in each group was bed_bath_table. One can infer that a lot of the items that fall in this category are large bulk item that require time and care in order to ship espeically across large disances. It is perhaps for these reasons that is why the category has the most orders in both groups.
+- Three categories that appear in both groups are bed_bath_table, health_beauty, sports_leisure. We can flag orders from these categories and try to reduce the amount of orders that take longer than 30 days and see how that affects the overall review score.
+- -
 
 
 <div align="center">
