@@ -7,7 +7,7 @@ Often times e-commerce companies face customer churn driven by delayed deliverie
 In order ot get customer feedback, e-commerce companies usually let customers write a review and leave a score of their order experiance. The review score can then effortlessly be used as a way to measure customer satisfaction. 
 A few questions were created in order to achive our goal and be more focus on the type of data needed to be analyze. The main qustion was: **Do delivery delays lead to lower customer review scores?**. To help support and answer this question, 
 3 more questions were made.
-1. Are late deliveries statistically associated with worse reviews?
+1. Are slower deliveries statistically associated with worse reviews?
 2. What factors predict long delivery times?
 3. Do higher-priced orders get better reviews? 
 
@@ -206,6 +206,12 @@ Findings:
 
 The tabes above show the top sellers with the most delayed orders and their two highest value orders with review scores of 2 or less. The critiera was created in order to find patterns of why a seller might recive a bad score. Here are some conclusions based on the data found. 
 - The two highlighted sellers appear in both groups, 30-60 day group and 60+ days group, indecating that the sellers may have a history of accumlating order that take a long time to deliver. It would be ideal to flag these sellers and perhaps help them find solutions to speed up delivery time.
-- 
+- The sellers have products in the same categoires that were found earlier like, watches_gift, bed_bath_table, health_beauty, and auto. It further confirms that products in these categories are more likely to take a longer time or be a bad product leading to a low review score. 
+- Many of the in both tables have an order value that is above the median and average and are consider "high order value". A combination of high order value, bad product category, and long dilvery time can lead to low review score as these orders demonstarte but may not be the full story.
+
+So far, many of the visuals have suggested that longer delivery times do lead to more negative reviews. It is important to also find statistical evidence for this claim as the more evidence found the more certain we can defend our claim. 
+
+## Statistical Analysis 
+One of the supporting questions for this project was, Are slower deliveries statistically associated with worse reviews? In order to answer this question, a Welch’s t-test was used. We want to find if there is a differnce in the mean score of groups, fast vs slow delivery times, and see if this differance is present or just by chance. A Welch's t-test was used because we are looking at the score averages of two groups that are indpendent of each other and both have different sizes and varanice. A Welch's t-test takes into account all of those parameters. The two groups created were orders that took 20 days or less to deliver vs 30 days or more. I used 20 days as a cutoff because exploratory analysis showed customer ratings remain stable up to that point and decline sharply afterward. This threshold reflects both data behavior and realistic delivery expectations, allowing us to quantify the impact of late deliveries. 
 
 
