@@ -165,7 +165,8 @@ There are many factors that can also impact review score, however I decided to f
 Findings: 
 - The category that had the most orders in each group was bed_bath_table. One can infer that a lot of the items that fall in this category are large bulk item that require time and care in order to ship espeically across large disances. It is perhaps for these reasons that is why the category has the most orders in both groups.
 - Three categories that appear in both groups are bed_bath_table, health_beauty, sports_leisure. We can flag orders from these categories and try to reduce the amount of orders that take longer than 30 days and see how that affects the overall review score.
-- -
+- Although the average deliver days for all the catergories found were more than 30 days, other factors could contribute to the low ratings. Some other factors to look at is order prices and product quality
+  as well. A combination of all three can help further explain the ratings for each. 
 
 
 <div align="center">
@@ -173,12 +174,12 @@ Findings:
 ### Top 5 Sellers with the most delayed orders (30-60 Days)
 |Index|Seller_Id|Product Category|Seller City|Order Value|Delivery Days|Review Score|
 | ----------- | ----------- | ----------- | ----------- | ----------- |----------- | -----------|
-|1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|	itaquaquecetuba|	$3,748.50	|43|1|
-1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|itaquaquecetuba|$1,529.10	|39|1|
-2|	4869f7a5dfa277a7dca6462dcf3b52b2| watches_gifts| guariba| $689.00|30| 1|
-2|	4869f7a5dfa277a7dca6462dcf3b52b2| watches_gifts| guariba|$688.00|32	|1|
-3| 4a3ca9315b744ce9f8e9374361493884| bed_bath_table| ibitinga| $2,768.00|34|1|
-3| 4a3ca9315b744ce9f8e9374361493884| bed_bath_table| ibitinga|$1,493.10|37|	1|
+|1|<mark>7c67e1448b00f6e969d365cea6b010ab<mark>|office_furniture|	itaquaquecetuba|	$3,748.50	|43|1|
+1|<mark>7c67e1448b00f6e969d365cea6b010ab<mark>|office_furniture|itaquaquecetuba|$1,529.10	|39|1|
+2|4869f7a5dfa277a7dca6462dcf3b52b2| watches_gifts| guariba| $689.00|30| 1|
+2|4869f7a5dfa277a7dca6462dcf3b52b2| watches_gifts| guariba|$688.00|32	|1|
+3| <mark>4a3ca9315b744ce9f8e9374361493884<mark>| bed_bath_table| ibitinga| $2,768.00|34|1|
+3| <mark>4a3ca9315b744ce9f8e9374361493884<mark>| bed_bath_table| ibitinga|$1,493.10|37|	1|
 4| 1f50f920176fa81dab994f9023523100| garden_tools| sao jose do rio preto|	$539.10|	32|	2|
 4| 1f50f920176fa81dab994f9023523100| garden_tools| sao jose do rio preto|	$485.10	|51|	1|
 5| cc419e0650a3c5ba77189a1882b7556a| health_beauty| santo andre	|$89.99	|32	|2|
@@ -192,16 +193,19 @@ Findings:
 ### Top 5 Sellers with the most delayed orders (60+ Days)
 |Index|Seller_Id|Product Category|Seller City|Order Value|Delivery Days|Review Score|
 | ----------- | ----------- | ----------- | ----------- | ----------- |----------- | -----------|
-|1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|itaquaquecetuba|$719.91|85|1|
-|1|7c67e1448b00f6e969d365cea6b010ab|office_furniture|itaquaquecetuba|$229.99|72|1|
+|1|<mark>7c67e1448b00f6e969d365cea6b010ab<mark>|office_furniture|itaquaquecetuba|$719.91|85|1|
+|1|<mark>7c67e1448b00f6e969d365cea6b010ab<mark>|office_furniture|itaquaquecetuba|$229.99|72|1|
 |2|da8622b14eb17ae2831f4ac5b9dab84a|bed_bath_table|piracicaba|	$169.90|62|1|
 |2|da8622b14eb17ae2831f4ac5b9dab84a|bed_bath_table|piracicaba|	$109.90|63|1|
-|3|	4a3ca9315b744ce9f8e9374361493884|bed_bath_table|ibitinga|$279.90|64|1|
+|3|	<mark>4a3ca9315b744ce9f8e9374361493884<mark>|bed_bath_table|ibitinga|$279.90|64|1|
 |4|	712e6ed8aa4aa1fa65dab41fed5737e4|	auto|	videira	|$559.00|133|2|
 |4|	712e6ed8aa4aa1fa65dab41fed5737e4|	auto|videira|$559.00|61|1|
 |5|	e9779976487b77c6d4ac45f75ec7afe9|	food|praia grande	|$177.00|68|1|
 |5|	e9779976487b77c6d4ac45f75ec7afe10|drinks|praia grande|$130.00|	68	|1|
+</div>
 
-
+The tabes above show the top sellers with the most delayed orders and their two highest value orders with review scores of 2 or less. The critiera was created in order to find patterns of why a seller might recive a bad score. Here are some conclusions based on the data found. 
+- The two highlighted sellers appear in both groups, 30-60 day group and 60+ days group, indecating that the sellers may have a history of accumlating order that take a long time to deliver. It would be ideal to flag these sellers and perhaps help them find solutions to speed up delivery time.
+- 
 
 
