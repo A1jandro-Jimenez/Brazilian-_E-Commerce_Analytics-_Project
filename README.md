@@ -214,4 +214,56 @@ So far, many of the visuals have suggested that longer delivery times do lead to
 ## Statistical Analysis 
 One of the supporting questions for this project was, Are slower deliveries statistically associated with worse reviews? In order to answer this question, a Welch’s t-test was used. We want to find if there is a differnce in the mean score of groups, fast vs slow delivery times, and see if this differance is present or just by chance. A Welch's t-test was used because we are looking at the score averages of two groups that are indpendent of each other and both have different sizes and varanice. A Welch's t-test takes into account all of those parameters. The two groups created were orders that took 20 days or less to deliver vs 30 days or more. I used 20 days as a cutoff because exploratory analysis showed customer ratings remain stable up to that point and decline sharply afterward. This threshold reflects both data behavior and realistic delivery expectations, allowing us to quantify the impact of late deliveries. 
 
+### Welch's t-test 
+<div align="center">
+  
+**Hypothesis** 
+
+H<sub>0</sub> : μ<sub>f</sub> = μ<sub>s</sub>
+
+H<sub>a</sub> : μ<sub>f</sub> ≠ μ<sub>s</sub>
+</div>
+
+The first step of a t-test is to establish our hypothesis. Here we stated that H<sub>0</sub>: Delivery time has no effect on average rating so both means should be the same. The alternative H<sub>a</sub>: Longer delivery times reduce ratings so both average ratings should be different. We also must establish our significance level for when we can reject the null hypothesis. For this testing I used a typical value of 0.05. Once both the hypothesis and significance level were established, I ran the test using Python with the following code:
+
+```python
+fast2 = df3[df3.delivery_days <= 20]["avg_review_score"]
+slow2 = df3[df3.delivery_days > 20]["avg_review_score"]
+ttest_ind( fast2, slow2, equal_var=False)
+```
+*TtestResult(statistic=76.02566383124658, pvalue=0.0, df=16651.26446050674)* 
+
+
+The two main takeaways from the results are:
+1. P-value is less than 0.05 so we can reject the null hypothesis that delivery time has no effect on average rating. The difference in customer ratings between fast and slow deliveries is extremely statistically significant, with p-values effectively zero due to large sample size. The p-value appears as zero because it’s below machine precision. This indicates extremely strong evidence against the null hypothesis, which is expected given the large dataset and meaningful difference in delivery performance.
+2. The T statistic is a postive value which is expected as when looking at the differnce of average scores (avg.fast - avg.slow) if avg.fast > avg.slow you would expect a postive result which we got.
+
+It was found that there was significant evidence to support our claim, however we want to find out how big is the differance? Confidence intervals can help us answer this question. 
+```python
+mean_diff = fast.mean() - slow.mean()
+se = np.sqrt(fast.var()/len(fast) + slow.var()/len(slow))
+ci_low = mean_diff - 1.96 * se
+ci_high = mean_diff + 1.96 * se
+ci_low, ci_high
+```
+*(1.1192659244909728, 1.1784582053598458)*
+
+A 95% confidence interval was used. We are 95% confident that fast deliveries receive between 1.12 and 1.18 more stars than slow deliveries. If we repeated this analysis many times, 95% of the intervals would contain the true mean difference.Even accounting for sampling uncertainty, fast deliveries consistently outperform slow deliveries by about one full star, with a narrow confidence show­ing high reliability. 
+
+
+```python
+def cohens_d(x, y):
+    nx, ny = len(x), len(y)
+    pooled_std = np.sqrt(
+        ((nx - 1)*x.var() + (ny - 1)*y.var()) / (nx + ny - 2)
+    )
+    return (x.mean() - y.mean()) / pooled_std
+
+cohens_d(fast, slow)
+```
+*0.9401271970507961* 
+
+Cohen's d was used to see the effect size of the difference between the two means. It is traditionaly intrpretated that a result of 0.8 or more indicates a large effect that is observable to the naked eye. In our case there is a big obsevable effect as expected. Since there is a small scale of scores (1-5) a one point diffrence is large. For example if a score is around 3 a one point reduction can change it from a "good review" to a "bad review". 
+
+In conclusion, statistical evidence was found to support the claim that on average faster delivery times get a higher review score than slower delivery times. It was found that with 95% confidence faster deliveries receive between 1.12 and 1.18 more stars than slow deliveries. Since scores are measured at a small scale, a 1 point differnce can have a large effect. 
 
