@@ -267,3 +267,4 @@ Cohen's d was used to see the effect size of the difference between the two mean
 
 In conclusion, statistical evidence was found to support the claim that on average faster delivery times get a higher review score than slower delivery times. It was found that with 95% confidence faster deliveries receive between 1.12 and 1.18 more stars than slow deliveries. Since scores are measured at a small scale, a 1 point differnce can have a large effect. 
 
+## Predictive Modeling
