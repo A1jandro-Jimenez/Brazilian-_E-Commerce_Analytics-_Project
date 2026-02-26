@@ -268,6 +268,42 @@ Cohen's d was used to see the effect size of the difference between the two mean
 In conclusion, statistical evidence was found to support the claim that on average faster delivery times get a higher review score than slower delivery times. It was found that with 95% confidence faster deliveries receive between 1.12 and 1.18 more stars than slow deliveries. Since scores are measured at a small scale, a 1 point differnce can have a large effect. 
 
 ## Predictive Modeling
-Figure 3            |  Figure 4
-:-------------------------:|:-------------------------:
-|  ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Review%20Score%20by%20Delivery%20Time.svg) | ![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/my_plot.svg) |
+<div align="center">
+  
+![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/logit_test_olist.png) 
+
+</div>
+
+
+
+Logistic regression analysis was performed to examine the influence of delivery days, freight value, order value, number of items, and if an order is late on the variable negative review to predict the value "negative review"(score less than or equal to 2). Logistic regression analysis shows that the model as a whole is significant with a LLR p-value of 0.000 which as found earlier can be due to machine precision. 
+
+<div align="center">
+  
+| Feature | Odds ratio|
+|--------|--------|
+|const|0.048381|
+|delivery_days|1.032452|
+|freight_value|1.000405|
+|order_value  |1.000158|
+|num_items|1.444045|
+|is_late| 7.542064|
+
+</div>
+
+- The coefficient of the variable **delivery_days** is coef = 0.0319, which is positive. This means that an increase in delivery days is associated with an increase in the probability that the dependent variable is "negative review". The p-value of 0.000 indicates that this influence is statistically significant.The odds ratio of 1.032 indicates that each additional delivery day increases the odds of a negative review by 3.2%, holding all other factors constant. +10 days → ~32% higher odds. +30 → ~96% higher odds. Figure 1 and 3 help suppor this.
+
+  
+- The coefficient of the variable **freight_value** is coef = 0.0004, which is just slightly positive. This means that an increase in freight value is associated with a small increase in the probability that the dependent variable is "negative review". However the p-value of 0.159 indicates that this influence is not statistically significant. The odds ratio of 1.000405 indicates that each additional $1 in shipping cost increases the odds of a negative review by 0.0405% holding all other factors constant. +$50 → ~2% higher odds. +$100 → ~4% higher odds. Shipping cost matters, but far less than delivery time.
+
+
+- The coefficient of the variable **order_value** is coef = 0.0002, which is just slightly positive. This means that an increase in order value is associated with a small increase in the probability that the dependent variable is "negative review". The p-value of 0.000 indicates that this influence is statistically significant. The odds ratio of 1.000158 indicates that each additional $1 in order value increases the odds of a negative review by 0.0158% holding all other factors constant. +$100 → ~1.6% higher odds. +$300 → ~4.8% higher odds. Indicates higher expectations for expensive orders.
+
+
+-  The coefficient of the variable **num_items** is coef = 0.3674, which is positive. This means that an increase in number of items is associated with an increase in the probability that the dependent variable is "negative review". The p-value of 0.000 indicates that this influence is statistically significant. The odds ratio of 1.444045 indicates that each additional item in an order increases the odds of a negative review by 44.4% holding all other factors constant. More items → more chances for damage, missing items, delays.
+
+
+- The coefficient of the variable **is_late** is coef = 2.0205, which is positive. This means that an order being late is associated with an increase in the probability that the dependent variable is "negative review". The p-value of 0.000 indicates that this influence is statistically significant The odds ratio of 7.542064 indicates that late deliveries have 7.5× higher odds of receiving a negative review compared to on-time deliveries. Unlike the other variables that depend on an additional unit increase, the is late variable is binary with only two options available thus making it the strongest driver in the model.
+
+
+Late deliveries increase the odds of a negative review by over 7×, making delivery timeliness the single most important driver of customer dissatisfaction. Order complexity and delivery duration further compound this risk, while pricing factors play a secondary role.
