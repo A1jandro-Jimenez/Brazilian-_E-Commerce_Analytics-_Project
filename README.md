@@ -307,3 +307,29 @@ Logistic regression analysis was performed to examine the influence of delivery 
 
 
 Late deliveries increase the odds of a negative review by over 7×, making delivery timeliness the single most important driver of customer dissatisfaction. Order complexity and delivery duration further compound this risk, while pricing factors play a secondary role. This Logistic Regression Model can be used to predict the chances of an order being given a negative review aka a score less than or equal to two using all the information mentioned above. 
+
+
+## Dashboard
+<div align="center">
+  
+![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Olist_Report.png?raw=true)
+
+</div>
+
+
+A report was created using Power BI to showcase and recap the most valuable findings. In the top area of the report, cards can be found replcating some features found in our KPI table. These measurments will help us track progress towards our goal. We can track the same metrics before and after bussiness recomindation in order to see if they had a dramatic impact/see if they worked. On the left side the two figures from earlier displaying delivery time and review score can be found. 
+
+The show a clear pattern of review score decreasing as delivery time increases. They also help to see th threshold for when scores begin to change. The right side of the report is focused more on order value. The two charts display where the largest amount of orders can be found and their review scores aswell. It is importnat to see where most of the revenue comes from and measure ways to increase it thus the need for the two charts. 
+
+The matrix table displays all the cards information but broken down into the different states that sellers are from. The map is an extension of the table as it shows the areas where review scores are low (red areas) but also where scores are high (green areas) and everything inbetween. The bottom visuals are necessary to find factors that need to be imporve. Sellers are responsible for the quality of the products, the time it takes for an order to be ready, and also their location. These factors play a huge role in delivery time so finding the locations where sellers struggle the most can lead us finding a sloution to solve the most common issues. 
+
+
+## Business Recommendations
+
+The goal for this porject was to answer the question **how do delivery performance and order characteristics affect customer satisfaction?** In order to achieve our goal, other subquestions were created. After analyzing and test performing, I was able to find answers to all of them. 
+
+- **Do delivery delays lead to lower customer review scores?** : Yes! From our figures the data shows a clear decline trend of high review socores, 5 and 4 stars, as delivery time increases.
+
+- **Are slower deliveries statistically associated with worse reviews?** : Yes! From our testing it was found that average review score of the faster delivery time group, orders that take 20 days or less, was statisticaly different than that of the slower delivery time group, orders that take 20 days or more. The diffrence was negative indecating that faster average score > than slower average score.
+
+- **What factors predict long delivery times?** & **Do higher-priced orders get better reviews?** 
