@@ -332,4 +332,15 @@ The goal for this porject was to answer the question **how do delivery performan
 
 - **Are slower deliveries statistically associated with worse reviews?** : Yes! From our testing it was found that average review score of the faster delivery time group, orders that take 20 days or less, was statisticaly different than that of the slower delivery time group, orders that take 20 days or more. The diffrence was negative indecating that faster average score > than slower average score.
 
-- **What factors predict long delivery times?** & **Do higher-priced orders get better reviews?** 
+- **What factors predict long delivery times?** & **Do higher-priced orders get better reviews?** Two of the main factors that can predict longer delivery times are type of product purchased and number of items. From the tables, we found that large items that fall under the categories of bed_bath_table, office_furniture, and furniture_decor will typically take the longest to deliver due to them being large heavy and require proper care to be deliver safely. Our model predcited that the number of items in an order has a huge effect when detemering if an order will get a negative review. However that was not the case with order value and cost. An increase in both actualy pridected a slight chance of getting a negative review as customers have higher expections and are more prone to leave a bad review if they are not met.
+
+### 1. Don't be late! 
+Our model predicted that an order classified as late increases the chances of an order reciving a negative review the most. It was found that late orders are 7x more likley to recive a negative review than on time orders. A simple solution is to flag the type of order. For example for large items that fall into the discovered categories should have expected delivery times that are longer than smaller easier orders. This way customers are told before hand that their order will take long so no suprises appear and are not upset when they don't recvive their order by when it was promised. A another option would be to look a the logitics and find the route that is the fastest to get from seller to customer cutting down deilvery time. 
+
+### 2. 20-30 days 
+The model showed that for each additonal delivery day, the chances of an order reciving a negative review increase by 3.2%. To decrease those chances it is best to have most orders if possible be deilivered by idealy 20 days but 30 will be acceptable for more complex orders. Delivering orders by 20 days rather than 30 decreases the chance of recving a negative review by atleast 32%. 
+
+### 3. Compensation and incentives
+Things happen and not every order will be able to be delivered on time. In order to have customers return to the site and perhaps live a better review then they orinally plan, is to provide a discount on their next purchase, or maybe some kind of store credit that they can use in the future. It will show that they are appericaited and that we care about their satisfaction. As for sellers we can offer incentives like getting a small bonus for hitting delivery goals, or promoting them more if a certain review score is kept. This small things can help sellers want to get orders out on time and keep using our website and services. 
+
+## Limitations & Next Step
