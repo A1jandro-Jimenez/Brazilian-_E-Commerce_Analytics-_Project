@@ -344,3 +344,23 @@ The model showed that for each additonal delivery day, the chances of an order r
 Things happen and not every order will be able to be delivered on time. In order to have customers return to the site and perhaps live a better review then they orinally plan, is to provide a discount on their next purchase, or maybe some kind of store credit that they can use in the future. It will show that they are appericaited and that we care about their satisfaction. As for sellers we can offer incentives like getting a small bonus for hitting delivery goals, or promoting them more if a certain review score is kept. This small things can help sellers want to get orders out on time and keep using our website and services. 
 
 ## Limitations & Next Step
+The data used consited of only orders that had a status of delivered, however the full data set had diffrent status like unavalible, shipped, canceled, among many others. We also excluded orders that did not have a review score or had any information missing. 
+
+Data used for seller analysis focused on deilver time and score but lacked info about product quality. Also the type of payment people used when ordering was not used but could be an intresting investagation on how that could affect customer satisfaction. 
+
+Some key assumptions of the Welch's t-test were:
+- Independence of Observations: Data points in each group are independent, meaning subjects in one group are not related to subjects in the other.
+- Normality: The data for each group should be approximately normally distributed.
+- Continuous Data: The dependent variable is measured on a continuous scale.
+- No Significant Outliers: The groups should not contain extreme outliers that could distort the mean. 
+
+Some key assumptions for binary logistic regression include:
+- Binary Dependent Variable: The outcome must be dichotomous (e.g., yes/no, 0/1).
+- Independence of Observations: Data points must not be dependent or matched (e.g., not repeated measures).
+- Linearity of Independent Variables and Log Odds: Continuous predictors must have a linear relationship with the logit of the outcome, not necessarily the outcome itself.
+- No or Little Multicollinearity: Independent variables should not be highly correlated with each other.
+- Large Sample Size: A large sample is needed for maximum likelihood estimation to be reliable. A general rule is at least 10–20 cases of the least frequent outcome per predictor.
+- No Extreme Outliers: Extreme outliers can significantly distort model coefficients and predictions. 
+
+What's next?
+With more time and more data it would be ideal to look into how distance from seller to buyer affects deilvery time and satsifaction. Also a few of the orders had a review comment that was in portugues. Reading each comment to see why a person left a certin review score would be a huge clue into what needs to improve in order to have better cutomer satisfaction. Lastley we could break up the orders by year to see what year had the best score and find patterns and trends to see why the other years did not met up to it. There is a lot of data that can be used to find many outcomes which is a reason I chose to use this data set. It provied real world data that could be used for many cases. 
