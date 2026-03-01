@@ -269,9 +269,7 @@ In conclusion, statistical evidence was found to support the claim that on avera
 
 ## Predictive Modeling
 <div align="center">
-  
-![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/logit_test_olist.png) 
-
+<img src="Pics and Charts/logit_test_olist.png" width="400">
 </div>
 
 
@@ -311,11 +309,8 @@ Late deliveries increase the odds of a negative review by over 7×, making deliv
 
 ## Dashboard
 <div align="center">
-  
-![](https://github.com/A1jandro-Jimenez/Brazilian-_E-Commerce_Analytics-_Project/blob/main/Pics%20and%20Charts/Olist_Report.png?raw=true)
-
-</div>
-
+<img src="Pics and Charts/Olist_Report.png" width="450">
+</div
 
 A report was created using Power BI to showcase and recap the most valuable findings. In the top area of the report, cards can be found replicating some features found in our KPI table. These measurements will help us track progress towards our goal. We can track the same metrics before and after business recommendation to see if they had a dramatic impact/see if they worked. On the left side the two figures from earlier displaying delivery time and review score can be found. 
 
